@@ -1,7 +1,7 @@
 import tensorflow as tf
-from keras import applications
-# import keras_applications
+#from keras import applications
+import keras_applications
 from tensorflow.python.keras import engine as keras_engine
 
-applications.set_keras_submodules(backend=tf.keras.backend, layers=tf.keras.layers, models=tf.keras.models,
+keras_applications.set_keras_submodules(backend=tf.keras.backend, layers=tf.keras.layers, models=tf.keras.models,
                                         utils=tf.keras.utils, engine=keras_engine)
