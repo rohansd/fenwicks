@@ -8,8 +8,8 @@ from sklearn.model_selection import train_test_split
 
 from . import io
 
-from tensorflow.contrib.tpu.python.tpu import datasets as tpu_datasets
-
+# from tensorflow.contrib.tpu.python.tpu import datasets as tpu_datasets
+import tensorflow_datasets as tpu_datasets
 
 def float_tffeature(value) -> tf.train.Feature:
     if not isinstance(value, list):
