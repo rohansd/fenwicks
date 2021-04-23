@@ -26,7 +26,7 @@ class SGD(tf.compat.v1.train.MomentumOptimizer):
         return grads_and_vars
 
 
-class Adam(tf.train.AdamOptimizer):
+class Adam(tf.compat.v1.train.AdamOptimizer):
     def __init__(self, lr: Union[float, tf.Tensor] = 0.001, wd: float = None, beta1: float = 0.9, beta2: float = 0.999,
                  epsilon: float = 1e-8, exclude_from_wd: List[str] = None, clip_norm: float = None):
         super().__init__(learning_rate=lr, beta1=beta1, beta2=beta2, epsilon=epsilon)
